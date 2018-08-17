@@ -54,4 +54,14 @@ public class TriangleClassifierTest {
         String actual = TriangleClassifier.triangleClassifier(edge_1, edge_2, edge_3);
         assertEquals(expect,actual);
     }
+    @Test
+    public void triangleClassifierWithEdge0() {
+        int edge_1 = 0;
+        int edge_2 = 1;
+        int edge_3 = 1;
+
+        String expect = "Not Triangle";
+        String actual = TriangleClassifier.triangleClassifier(edge_1, edge_2, edge_3);
+        assertEquals(expect,actual);
+    }
 }
