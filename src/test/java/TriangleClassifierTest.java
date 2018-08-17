@@ -29,12 +29,23 @@ public class TriangleClassifierTest {
     }
     @Test
     @DisplayName("Test value with a # b # c")
-    public void triangleClassifierWith3DifferentEdges() {
+    public void triangleClassifierWith3DifferentEdges_1() {
         int edge_1 = 3;
         int edge_2 = 4;
         int edge_3 = 5;
 
         String expect = "Triangle";
+        String actual = TriangleClassifier.triangleClassifier(edge_1, edge_2, edge_3);
+        assertEquals(expect,actual);
+    }
+    @Test
+    @DisplayName("Test value with a # b # c")
+    public void triangleClassifierWith3DifferentEdges_2() {
+        int edge_1 = 8;
+        int edge_2 = 2;
+        int edge_3 = 3;
+
+        String expect = "Not Triangle";
         String actual = TriangleClassifier.triangleClassifier(edge_1, edge_2, edge_3);
         assertEquals(expect,actual);
     }
