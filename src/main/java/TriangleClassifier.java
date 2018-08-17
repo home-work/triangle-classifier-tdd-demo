@@ -2,11 +2,13 @@ public class TriangleClassifier {
     public static void main(String[] args) {
     }
 
-    public static boolean triangleClassifier(int edge_1, int edge_2, int edge_3) {
+    public static String triangleClassifier(int edge_1, int edge_2, int edge_3) {
         if (edge_1 == edge_2 && edge_2 == edge_3) {
-            return true;
+            return "Equilateral Triangle";
         } else {
-            return false;
+            if (edge_1 == edge_2 || edge_1 == edge_3 || edge_2 == edge_3) {
+                return "Isosceles Triangle";
+            } else return "";
         }
     }
 
