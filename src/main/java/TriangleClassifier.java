@@ -8,13 +8,12 @@ public class TriangleClassifier {
         } else {
             if (edge_1 == edge_2 || edge_1 == edge_3 || edge_2 == edge_3) {
                 return "Isosceles Triangle";
-            } else {
-                if (edge_1 + edge_2 > edge_3 || edge_3 + edge_2 > edge_1 || edge_1 + edge_3 > edge_2) {
-                    return "Triangle";
-                } else {
-                    return "";
-                }
             }
+        }
+        if (edge_1 + edge_2 > edge_3 && edge_3 + edge_2 > edge_1 && edge_1 + edge_3 > edge_2) {
+            return "Triangle";
+        } else {
+            return "Not Triangle";
         }
     }
 }
