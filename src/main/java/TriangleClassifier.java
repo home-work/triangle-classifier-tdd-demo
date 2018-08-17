@@ -7,6 +7,9 @@ public class TriangleClassifier {
             return "Equilateral Triangle";
         } else {
             if (edge_1 == edge_2 || edge_1 == edge_3 || edge_2 == edge_3) {
+                if (edge_1 == 0 || edge_2 == 0 || edge_3 == 0) {
+                    return "Not Triangle";
+                }
                 return "Isosceles Triangle";
             }
         }
