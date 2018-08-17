@@ -27,4 +27,15 @@ public class TriangleClassifierTest {
         String actual = TriangleClassifier.triangleClassifier(edge_1, edge_2, edge_3);
         assertEquals(expect,actual);
     }
+    @Test
+    @DisplayName("Test value with a # b # c")
+    public void triangleClassifierWith3DifferentEdges() {
+        int edge_1 = 3;
+        int edge_2 = 4;
+        int edge_3 = 5;
+
+        String expect = "Triangle";
+        String actual = TriangleClassifier.triangleClassifier(edge_1, edge_2, edge_3);
+        assertEquals(expect,actual);
+    }
 }
